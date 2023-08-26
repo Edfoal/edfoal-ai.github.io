@@ -45,7 +45,14 @@
         -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     }
 }
-
+@font-face{
+    font-family: android;
+    src: url(../fonts/Android.ttf);
+}
+.logoname{
+    font-family: android;
+    color: black;
+}
 #spinner {
     opacity: 0;
     visibility: hidden;
