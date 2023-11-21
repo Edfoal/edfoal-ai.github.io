@@ -93,7 +93,31 @@ h6,
     font-weight: 600;
     transition: .5s;
 }
-
+.usecasecard1 {
+    background-image: url('../img/realestate.png');
+    /* color: white; */
+}
+.usecasecard2 {
+    background-image: url('../img/manu.png');
+}
+.usecasecard3 {
+    background-image: url('../img/edu.png');
+}
+.usecasecard4 {
+    background-image: url('../img/fin.png');
+}
+.usecasecard5 {
+    background-image: url('../img/ssma.png');
+}
+.usecasecard6 {
+    background-image: url('../img/customer.png');
+}
+.usecasecard7 {
+    background-image: url('../img/retail.png');
+}
+.usecasecard8 {
+    background-image: url('../img/logi.png');
+}
 .btn-primary,
 .btn-secondary {
     color: #FFFFFF;
