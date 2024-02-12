@@ -15,10 +15,22 @@
             max-width: 600px;
             margin: 0 auto;
         }
+        h3 {
+    font-size: 1.5em; /* Adjust the font size for heading tags */
+    font-weight: bold;
+    color: #091E3E;
+}
 
         .form-group {
             margin-bottom: 15px;
         }
+        label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Adjust the font weight for label tags */
+    color: #091E3E; /* Adjust the color for label tags */
+}
+
 
         .form-group label {
             display: block;
@@ -31,10 +43,17 @@
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
         .form-group textarea {
             resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #091E3E;
+            box-shadow: 0 0 5px rgba(9, 30, 62, 0.5);
         }
 
         .form-group button {
@@ -187,19 +206,19 @@
     <script>
         var form = document.getElementById('sheetdb-form');
         form.addEventListener("submit", e => {
-          e.preventDefault();
-          fetch(form.action, {
-                  method : "POST",
-                  body: new FormData(document.getElementById("sheetdb-form")),
-              }).then(
-                  response => response.json()
-              ).then((html) => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
                 // you can put any JS code here
                 document.location.href = "https://www.example.com/thank-you.html";
-              });
+            });
         });
     </script>
-    
+
 </body>
 
 </html>
