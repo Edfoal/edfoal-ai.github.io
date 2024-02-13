@@ -93,32 +93,66 @@
             /* overflow: hidden; */
             /* background-color: #f1f1f1; */
         }
+
+        .popup {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+
+        .popup-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888888;
+            width: 30%;
+            font-weight: bolder;
+        }
+
+        .popup-content button {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .show {
+            display: block;
+        }
+
+        h1 {
+            color: green;
+        }
     </style>
 </head>
 
 <body>
     <div class="form-container">
-        <form id="ai-solutions-form" action="https://sheetdb.io/api/v1/goq2oh0pijjd6" method="post" id="sheetdb-form">
+        <form id="ai-solutions-form" name="submit-to-google-sheet" method="post" id="sheetdb-form">
             <h3>Contact Information</h3>
             <div class="form-group">
                 <label for="full-name">Full Name</label>
-                <input type="text" id="full-name" name="data[full-name]" required>
+                <input type="text" id="full-name" name="full-name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="data[email]" required>
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="data[phone]" required>
+                <input type="tel" id="phone" name="phone" required>
             </div>
             <div class="form-group">
                 <label for="company-name">Company Name (if applicable)</label>
-                <input type="text" id="company-name" name="data[company-name]">
+                <input type="text" id="company-name" name="company-name">
             </div>
             <div class="form-group">
                 <label for="position">Position/Role (if applicable)</label>
-                <input type="text" id="position" name="data[position]">
+                <input type="text" id="position" name="position">
             </div>
             <hr>
             <h3>Inquiry Details</h3>
@@ -142,7 +176,9 @@
                 <textarea id="specific-problem" name="specific-problem" rows="3"></textarea>
             </div>
             <hr>
-            <button type="button" class="collapsible"><center>Open Collapsible</center></button>
+            <button type="button" class="collapsible">
+                <center>Open Collapsible</center>
+            </button>
             <div class="content">
                 <h3>Timeline</h3>
                 <div class="form-group">
@@ -237,6 +273,7 @@
         </form>
     </div>
     <script>
+
         var coll = document.getElementsByClassName("collapsible");
         var i;
 
@@ -251,19 +288,26 @@
                 }
             });
         }
-        var form = document.getElementById('sheetdb-form');
-        form.addEventListener("submit", e => {
-            e.preventDefault();
-            fetch(form.action, {
-                method: "POST",
-                body: new FormData(document.getElementById("sheetdb-form")),
-            }).then(
-                response => response.json()
-            ).then((html) => {
-                // you can put any JS code here
-                document.location.href = "https://www.example.com/thank-you.html";
-            });
+
+        const msg = document.getElementById('msg')
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxfGjN_d0EXSQw-8Q3FmVAEAzignyuxvuP18WnJjPP3UpB6tS2ELs0ZIov4K-W8p9ka/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+
+        form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            console.log('Success!', response);
+            // Redirect to https://edfoal.com/ after successful submission
+            window.location.href = 'https://edfoal.com/';
+        })
+        .catch(error => {
+            console.error('Error!', error.message);
+            // Handle error if needed
         });
+});
+
     </script>
 
 </body>
