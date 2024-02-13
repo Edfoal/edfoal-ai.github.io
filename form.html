@@ -15,21 +15,26 @@
             max-width: 600px;
             margin: 0 auto;
         }
+
         h3 {
-    font-size: 1.5em; /* Adjust the font size for heading tags */
-    font-weight: bold;
-    color: #091E3E;
-}
+            font-size: 1.5em;
+            /* Adjust the font size for heading tags */
+            font-weight: bold;
+            color: #091E3E;
+        }
 
         .form-group {
             margin-bottom: 15px;
         }
+
         label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold; /* Adjust the font weight for label tags */
-    color: #091E3E; /* Adjust the color for label tags */
-}
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            /* Adjust the font weight for label tags */
+            color: #091E3E;
+            /* Adjust the color for label tags */
+        }
 
 
         .form-group label {
@@ -68,6 +73,25 @@
 
         .form-group button:hover {
             background-color: #45a049;
+        }
+
+        .collapsible {
+            /* background-color: #eee; */
+            /* color: #444; */
+            /* cursor: pointer; */
+            /* padding: 18px; */
+            width: 100%;
+            border: none;
+            /* text-align: left; */
+            /* outline: none; */
+            font-size: 16px;
+        }
+
+        .content {
+            /* padding: 0 18px; */
+            display: none;
+            /* overflow: hidden; */
+            /* background-color: #f1f1f1; */
         }
     </style>
 </head>
@@ -118,92 +142,115 @@
                 <textarea id="specific-problem" name="specific-problem" rows="3"></textarea>
             </div>
             <hr>
-            <h3>Timeline</h3>
-            <div class="form-group">
-                <label for="expected-timeline">What is your expected timeline for starting and completing the
-                    project?</label>
-                <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+            <button type="button" class="collapsible"><center>Open Collapsible</center></button>
+            <div class="content">
+                <h3>Timeline</h3>
+                <div class="form-group">
+                    <label for="expected-timeline">What is your expected timeline for starting and completing the
+                        project?</label>
+                    <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="expected-timeline">Are there any specific deadlines or milestones you need to
+                        meet?</label>
+                    <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                </div>
+                <hr>
+                <h3> Budget</h3>
+                <div class="form-group">
+                    <label for="expected-timeline">Do you have a budget range allocated for this project?</label>
+                    <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                </div>
+                <hr>
+                <h3>Technical Requirements</h3>
+                <div class="form-group">
+                    <label for="expected-timeline">Are there any specific technical requirements or integrations you
+                        need
+                        for the AI solution?</label>
+                    <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="expected-timeline">Do you have any preferences regarding the technology stack or
+                        platforms
+                        to be used?
+                    </label>
+                    <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                </div>
+                <hr>
+                <h3>Previous Experience</h3>
+                <div class="form-group">
+                    <label for="expected-timeline">Have you implemented AI solutions in your business before?</label>
+                    <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="expected-timeline">If yes, please share your previous experiences and outcomes.
+                    </label>
+                    <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                </div>
+                <hr>
+                <h3>Competitor Analysis</h3>
+                <div class="form-group">
+                    <label for="expected-timeline">Are there any competitors using similar AI solutions that you find
+                        noteworthy?</label>
+                    <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="expected-timeline">What sets your business apart from competitors in terms of AI
+                        implementation?</label>
+                    <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                </div>
+                <hr>
+                <h3>Data Availability</h3>
+                <div class="form-group">
+                    <label for="expected-timeline">Do you currently have the necessary data for implementing AI
+                        solutions,
+                        or will data acquisition be part of the project?</label>
+                    <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                </div>
+                <hr>
+                <h3>Legal and Ethical Considerations</h3>
+                <div class="form-group">
+                    <label for="expected-timeline">Are there any legal or ethical considerations that should be taken
+                        into
+                        account in the development of the AI solution?</label>
+                    <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                </div>
+                <hr>
+                <h3>Additional Comments or Questions</h3>
+                <div class="form-group">
+                    <label for="expected-timeline">Is there anything else you would like to share or ask about your
+                        project?</label>
+                    <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                </div>
+                <hr>
+                <h3>Relevant document upload</h3>
+                <div class="form-group">
+                    <label for="expected-timeline">Like Project Scope Document
+                    </label>
+                    <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="expected-timeline">Are there any specific deadlines or milestones you need to meet?</label>
-                <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-            </div>
-            <hr>
-            <h3> Budget</h3>
-            <div class="form-group">
-                <label for="expected-timeline">Do you have a budget range allocated for this project?</label>
-                <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-            </div>
-            <hr>
-            <h3>Technical Requirements</h3>
-            <div class="form-group">
-                <label for="expected-timeline">Are there any specific technical requirements or integrations you need
-                    for the AI solution?</label>
-                <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="expected-timeline">Do you have any preferences regarding the technology stack or platforms
-                    to be used?
-                </label>
-                <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-            </div>
-            <hr>
-            <h3>Previous Experience</h3>
-            <div class="form-group">
-                <label for="expected-timeline">Have you implemented AI solutions in your business before?</label>
-                <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="expected-timeline">If yes, please share your previous experiences and outcomes.
-                </label>
-                <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-            </div>
-            <hr>
-            <h3>Competitor Analysis</h3>
-            <div class="form-group">
-                <label for="expected-timeline">Are there any competitors using similar AI solutions that you find
-                    noteworthy?</label>
-                <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="expected-timeline">What sets your business apart from competitors in terms of AI
-                    implementation?</label>
-                <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-            </div>
-            <hr>
-            <h3>Data Availability</h3>
-            <div class="form-group">
-                <label for="expected-timeline">Do you currently have the necessary data for implementing AI solutions,
-                    or will data acquisition be part of the project?</label>
-                <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-            </div>
-            <hr>
-            <h3>Legal and Ethical Considerations</h3>
-            <div class="form-group">
-                <label for="expected-timeline">Are there any legal or ethical considerations that should be taken into
-                    account in the development of the AI solution?</label>
-                <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-            </div>
-            <hr>
-            <h3>Additional Comments or Questions</h3>
-            <div class="form-group">
-                <label for="expected-timeline">Is there anything else you would like to share or ask about your
-                    project?</label>
-                <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-            </div>
-            <hr>
-            <h3>Relevant document upload</h3>
-            <div class="form-group">
-                <label for="expected-timeline">Like Project Scope Document
-                </label>
-                <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-            </div>
+
             <div class="form-group">
                 <button type="submit">Submit</button>
             </div>
         </form>
     </div>
     <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
         var form = document.getElementById('sheetdb-form');
         form.addEventListener("submit", e => {
             e.preventDefault();

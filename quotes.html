@@ -17,89 +17,95 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .form-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        h3 {
-            font-size: 1.5em;
-            /* Adjust the font size for heading tags */
-            font-weight: bold;
-            color: #091E3E;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            /* font-weight: ; Adjust the font weight for label tags */
-            color: #091E3E;
-            /* Adjust the color for label tags */
-        }
-
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: #091E3E;
-            box-shadow: 0 0 5px rgba(9, 30, 62, 0.5);
-        }
-
-        .form-group button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 15px;
-        }
-
-        .form-group button:hover {
-            background-color: #45a049;
-        }
-
-        .hidden {
-            display: none;
-        }
-        #expandFormButton {
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            padding: 8px 15px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-top: 15px;
-            cursor: pointer;
-        }
-    </style>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+    
+            .form-container {
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+    
+            h3 {
+                font-size: 1.5em;
+                /* Adjust the font size for heading tags */
+                font-weight: bold;
+                color: #091E3E;
+            }
+    
+            .form-group {
+                margin-bottom: 15px;
+            }
+    
+            label {
+                display: block;
+                margin-bottom: 5px;
+                /* font-weight: 400w; */
+                /* Adjust the font weight for label tags */
+                color: #091E3E;
+                /* Adjust the color for label tags */
+            }
+    
+    
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+    
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            }
+    
+            .form-group textarea {
+                resize: vertical;
+            }
+    
+            .form-group input:focus,
+            .form-group textarea:focus {
+                border-color: #091E3E;
+                box-shadow: 0 0 5px rgba(9, 30, 62, 0.5);
+            }
+    
+            .form-group button {
+                background-color: #091E3E;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                margin-top: 15px;
+            }
+    
+            .form-group button:hover {
+                background-color: #091E3E;
+            }
+    
+            .collapsible {
+                /* background-color: #eee; */
+                /* color: #444; */
+                cursor: pointer;
+                /* padding: 18px; */
+                /* width: 100%; */
+                border: none;
+                /* text-align: left; */
+                /* outline: none; */
+                font-size: 16px;
+            }
+    
+            .content {
+                /* padding: 0 18px; */
+                display: none;
+                /* overflow: hidden; */
+                /* background-color: #f1f1f1; */
+            }
+        </style>
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -193,7 +199,7 @@
         <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
             <div class="row py-5">
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-4 text-white animated zoomIn">Lead Query</h1>
+                    <h1 class="display-4 text-white animated zoomIn">Ask Query</h1>
                     <!-- <a href="" class="h5 text-white">Home</a> -->
                     <!-- <i class="far fa-circle text-white px-2"></i> -->
                     <!-- <a href="" class="h5 text-white">Contact</a> -->
@@ -244,155 +250,141 @@
                         </div> -->
                     </div>
                 </div>
-                <form id="ai-solutions-form" action="https://sheetdb.io/api/v1/goq2oh0pijjd6" method="post"
-                    id="sheetdb-form">
-                    <h3>Contact Information</h3>
-                    <div class="form-group">
-                        <label for="full-name">Full Name</label>
-                        <input type="text" id="full-name" name="data[full-name]" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="data[email]" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="data[phone]" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="company-name">Company Name (if applicable)</label>
-                        <input type="text" id="company-name" name="data[company-name]">
-                    </div>
-                    <div class="form-group">
-                        <label for="position">Position/Role (if applicable)</label>
-                        <input type="text" id="position" name="data[position]">
-                    </div>
-                    <hr>
-                    <button type="button" class="collapsible">Open Collapsible</button>
-                    <h3>Inquiry Details</h3>
-                    <div class="form-group">
-                        <label for="business-description">Describe your business or project briefly.</label>
-                        <textarea id="business-description" name="business-description" rows="3"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="ai-solutions">What specific AI-based solutions or services are you interested
-                            in?</label>
-                        <textarea id="ai-solutions" name="ai-solutions" rows="3"></textarea>
-                    </div>
-                    <hr>
-                    <h3>Project Scope</h3>
-                    <div class="form-group">
-                        <label for="main-goal">What is the main goal or objective of your project?</label>
-                        <textarea id="main-goal" name="main-goal" rows="3"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="specific-problem">Do you have a specific problem or challenge that you want the AI
-                            solution
-                            to address?</label>
-                        <textarea id="specific-problem" name="specific-problem" rows="3"></textarea>
-                    </div>
-                    <hr>
-                    
-                    <a id="expandFormButton" href="#">
-                        Expand Form
-                    </a>
-                    <div class="hidden">
-                        <h3>Timeline</h3>
+                <div class="form-container">
+                    <form id="ai-solutions-form" action="https://sheetdb.io/api/v1/goq2oh0pijjd6" method="post" id="sheetdb-form">
+                        <h3>Contact Information</h3>
                         <div class="form-group">
-                            <label for="expected-timeline">What is your expected timeline for starting and completing
-                                the
-                                project?</label>
-                            <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="data[full-name]" required>
                         </div>
                         <div class="form-group">
-                            <label for="expected-timeline">Are there any specific deadlines or milestones you need to
-                                meet?</label>
-                            <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="data[email]" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="data[phone]" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company-name">Company Name (if applicable)</label>
+                            <input type="text" id="company-name" name="data[company-name]">
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Position/Role (if applicable)</label>
+                            <input type="text" id="position" name="data[position]">
                         </div>
                         <hr>
-                        <h3> Budget</h3>
+                        <h3>Inquiry Details</h3>
                         <div class="form-group">
-                            <label for="expected-timeline">Do you have a budget range allocated for this
-                                project?</label>
-                            <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                            <label for="business-description">Describe your business or project briefly.</label>
+                            <textarea id="business-description" name="data[business-description]" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="ai-solutions">What specific AI-based solutions or services are you interested in?</label>
+                            <textarea id="ai-solutions" name="data[ai-solutions]" rows="3" required></textarea>
                         </div>
                         <hr>
-                        <h3>Technical Requirements</h3>
+                        <h3>Project Scope</h3>
                         <div class="form-group">
-                            <label for="expected-timeline">Are there any specific technical requirements or integrations
-                                you need
-                                for the AI solution?</label>
-                            <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                            <label for="main-goal">What is the main goal or objective of your project?</label>
+                            <textarea id="main-goal" name="data[main-goal]" rows="3" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="expected-timeline">Do you have any preferences regarding the technology stack or
-                                platforms
-                                to be used?
-                            </label>
-                            <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                            <label for="specific-problem">Do you have a specific problem or challenge that you want the AI solution
+                                to address?</label>
+                            <textarea id="specific-problem" name="data[specific-problem]" rows="3" required></textarea>
                         </div>
-                        <hr>
-                        <h3>Previous Experience</h3>
+                        <a class="collapsible"><center>Add More Detail</center></a>
+                        <div class="content">
+                            <hr>
+                            <h3>Timeline</h3>
+                            <div class="form-group">
+                                <label for="expected-timeline">What is your expected timeline for starting and completing the
+                                    project?</label>
+                                <textarea id="expected-timeline" name="data[expected-timeline]" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="deadline">Are there any specific deadlines or milestones you need to
+                                    meet?</label>
+                                <textarea id="deadline" name="data[deadline]" rows="3"></textarea>
+                            </div>
+                            <hr>
+                            <h3> Budget</h3>
+                            <div class="form-group">
+                                <label for="budget-range">Do you have a budget range allocated for this project?</label>
+                                <textarea id="budget-range" name="data[budget-range]" rows="3"></textarea>
+                            </div>
+                            <hr>
+                            <h3>Technical Requirements</h3>
+                            <div class="form-group">
+                                <label for="specific-technical">Are there any specific technical requirements or integrations you need for the AI solution?</label>
+                                <textarea id="specific-technical" name="data[specific-technical]" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="techstack">Do you have any preferences regarding the technology stack or platforms to be used?
+                                </label>
+                                <textarea id="techstack" name="data[techstack]" rows="3"></textarea>
+                            </div>
+                            <hr>
+                            <h3>Previous Experience</h3>
+                            <div class="form-group">
+                                <label for="previous-experience">Have you implemented AI solutions in your business before?</label>
+                                <textarea id="previous-experience" name="data[previous-experience]" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="previous-outcome">If yes, please share your previous experiences and outcomes.
+                                </label>
+                                <textarea id="previous-outcome" name="data[previous-outcome]" rows="3"></textarea>
+                            </div>
+                            <hr>
+                            <h3>Competitor Analysis</h3>
+                            <div class="form-group">
+                                <label for="other-competitor">Are there any competitors using similar AI solutions that you find
+                                    noteworthy?</label>
+                                <textarea id="other-competitor" name="data[other-competitor]" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="other-competitor-2">What sets your business apart from competitors in terms of AI
+                                    implementation?</label>
+                                <textarea id="other-competitor-2" name="data[other-competitor-2]" rows="3"></textarea>
+                            </div>
+                            <hr>
+                            <h3>Data Availability</h3>
+                            <div class="form-group">
+                                <label for="data-availability">Do you currently have the necessary data for implementing AI
+                                    solutions,
+                                    or will data acquisition be part of the project?</label>
+                                <textarea id="data-availability" name="data[data-availability]" rows="3"></textarea>
+                            </div>
+                            <hr>
+                            <h3>Legal and Ethical Considerations</h3>
+                            <div class="form-group">
+                                <label for="legal">Are there any legal or ethical considerations that should be taken
+                                    into
+                                    account in the development of the AI solution?</label>
+                                <textarea id="legal" name="data[legal]" rows="3"></textarea>
+                            </div>
+                            <hr>
+                            <h3>Additional Comments or Questions</h3>
+                            <div class="form-group">
+                                <label for="additional-comment">Is there anything else you would like to share or ask about your
+                                    project?</label>
+                                <textarea id="additional-comment" name="data[additional-comment]" rows="3"></textarea>
+                            </div>
+                            <hr>
+                            <h3>Relevant document upload</h3>
+                            <div class="form-group">
+                                <label for="relevent-doc">Like Project Scope Document
+                                </label>
+                                <textarea id="relevent-doc" name="data[relevent-doc]" rows="3"></textarea>
+                            </div>
+                        </div>
+            
                         <div class="form-group">
-                            <label for="expected-timeline">Have you implemented AI solutions in your business
-                                before?</label>
-                            <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
+                            <a href="index.html"><button type="submit">Submit</button></a>
                         </div>
-                        <div class="form-group">
-                            <label for="expected-timeline">If yes, please share your previous experiences and outcomes.
-                            </label>
-                            <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-                        </div>
-                        <hr>
-                        <h3>Competitor Analysis</h3>
-                        <div class="form-group">
-                            <label for="expected-timeline">Are there any competitors using similar AI solutions that you
-                                find
-                                noteworthy?</label>
-                            <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="expected-timeline">What sets your business apart from competitors in terms of AI
-                                implementation?</label>
-                            <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-                        </div>
-                        <hr>
-                        <h3>Data Availability</h3>
-                        <div class="form-group">
-                            <label for="expected-timeline">Do you currently have the necessary data for implementing AI
-                                solutions,
-                                or will data acquisition be part of the project?</label>
-                            <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-                        </div>
-                        <hr>
-                        <h3>Legal and Ethical Considerations</h3>
-                        <div class="form-group">
-                            <label for="expected-timeline">Are there any legal or ethical considerations that should be
-                                taken into
-                                account in the development of the AI solution?</label>
-                            <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-                        </div>
-                        <hr>
-                        <h3>Additional Comments or Questions</h3>
-                        <div class="form-group">
-                            <label for="expected-timeline">Is there anything else you would like to share or ask about
-                                your
-                                project?</label>
-                            <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-                        </div>
-                        <hr>
-                        <h3>Relevant document upload</h3>
-                        <div class="form-group">
-                            <label for="expected-timeline">Like Project Scope Document
-                            </label>
-                            <textarea id="expected-timeline" name="expected-timeline" rows="3"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
                 <!-- <div class="col-lg-4">
                     <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.4s">
                         <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
@@ -581,15 +573,21 @@
         <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
         <script>
-            var form = document.getElementById('sheetdb-form');
-            document.addEventListener("DOMContentLoaded", function () {
-                const showFullFormButton = document.getElementById("showFullFormButton");
-                const fullForm = document.getElementById("ai-solutions-form");
-
-                showFullFormButton.addEventListener("click", function () {
-                    fullForm.classList.toggle("hidden");
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+    
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
                 });
-            });
+            }
+            var form = document.getElementById('sheetdb-form');
             form.addEventListener("submit", e => {
                 e.preventDefault();
                 fetch(form.action, {
@@ -599,7 +597,7 @@
                     response => response.json()
                 ).then((html) => {
                     // you can put any JS code here
-                    document.location.href = "https://www.example.com/thank-you.html";
+                    document.location.href = "https://edfoal.com/index.html";
                 });
             });
         </script>
