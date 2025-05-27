@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../assets/css/home.css"/>
+    <link rel="stylesheet" href="../assets/css/contactus.css"/>
+
+    <style>
+        /* Toast Message Styles */
+        #toast-message {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #1a3875;
+            color: #fff;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 9999;
+            font-size: 16px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing header and nav here -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">
+                <img src="https://ik.imagekit.io/edfoalImage/assets/image/footerlogo.png" alt="Logo" />
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../pages/servicelist.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="../pages/aboutus.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="../pages/contactus.html" class="nav-link active">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="contactus-banner-body">
+        <div class="contactus-banner-grid-overlay"></div>
+        <div class="contactus-banner-content">
+            <div class="contactus-banner-about-label">Contact Us</div>
+            <h4 class="contactus-banner-main-heading">Tailored AI Solutions</h4>
+            <p class="contactus-banner-subtitle">Explore how we're transforming businesses with cutting-edge AI solutions tailored just for you!</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-us-section">
+        <div class="contact-us-container">
+            <div class="contact-us-left">
+                <h2 class="contact-us-left-h2">Get in <span>Touch</span></h2>
+                <p class="contact-us-description">Tailored technologies designed to drive your business forward and address your unique challenges!</p>
+
+                <div class="form-container">
+                    <form id="contactForm" name="submit-to-google-sheet" method="post">
+                        <div class="contact-us-form-group">
+                            <label for="fullName" class="contact-us-form-group-label">Full Name</label>
+                            <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="contact-us-form-group">
+                            <label for="email" class="contact-us-form-group-label">Work Email</label>
+                            <input id="email" name="email" type="email" placeholder="Enter your work email" required>
+                        </div>
+
+                        <div class="contact-us-form-group">
+                            <label for="phone" class="contact-us-form-group-label">Phone</label>
+                            <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required>
+                        </div>
+
+                        <div class="contact-us-text-in-form">
+                            <p>For a more tailored demo, please tell us about your company (optional)</p>
+                        </div>
+
+                        <div class="contact-us-form-group">
+                            <label for="company" class="contact-us-form-group-label">Company</label>
+                            <input id="company" name="company" type="text" placeholder="Enter your company name">
+                        </div>
+
+                        <div class="contact-us-form-group">
+                            <label for="geoFocus" class="contact-us-form-group-label">Geo Focus</label>
+                            <input id="geoFocus" name="geoFocus" type="text" placeholder="Enter your company's location">
+                        </div>
+
+                        <div class="contact-us-form-group">
+                            <label for="potentialUsecase" class="contact-us-form-group-label">Potential Usecase</label>
+                            <textarea id="potentialUsecase" name="potentialUsecase" placeholder="Describe"></textarea>
+                        </div>
+
+                        <div class="contact-us-form-check">
+                            <input type="checkbox" id="protectData" name="protectData">
+                            <label for="protectData">I want to protect my data</label>
+                        </div>
+
+                        <button type="submit" class="contact-us-submit-btn">Contact Us</button>
+                    </form>
+                </div>
+
+                <div class="contact-us-form-check">
+                    <p class="contact-us-field-note">Field marked with * are required to complete demo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Toast Message -->
+    <div id="toast-message"></div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Company Info -->
+            <div>
+                <img src="https://ik.imagekit.io/edfoalImage/assets/image/footerlogo.png" alt="EdFoal"
+                    class="footer-logo">
+                <p class="footer-company-desc">
+                    At EdFoal AI, we create tailored AI solutions to reduce costs, save time, and enhance business
+                    efficiency for growth.
+                </p>
+                <div class="footer-social-links">
+                    <!-- <a href="#" class="footer-social-link">Fb.</a> -->
+                    <!-- <a href="#" class="footer-social-link">Tw.</a> -->
+                    <a href="https://in.linkedin.com/company/edfoal" class="footer-social-link">LinkedIn</a>
+                    <!-- <a href="#" class="footer-social-link">In.</a> -->
+                </div>
+            </div>
+
+            <!-- Our Pages -->
+            <div class="footer-menu">
+                <h3>Our Pages</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./aboutus.html">About Us</a></li>
+                    <li><a href="./servicelist.html">Our Services</a></li>
+                    <!-- <li><a href="#">Use Cases</a></li> -->
+                    <li><a href="./contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-menu">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="../pages/automation.html">Automation</a></li>
+                    <li><a href="../pages/tailored-ai-solutions.html">Tailored AI Solutions</a></li>
+                    <li><a href="./ai-consultancy.html">AI Consultancy</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact-info">
+                <h3>Contact Us</h3>
+                <div class="footer-contact-item">
+                    <i class="mail-icon"></i>
+                    <div>
+                        <p>Send Mail</p>
+                        <a href="mailto:info@edfoal.com">info@edfoal.com</a>
+                    </div>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="clock-icon"></i>
+                    <div>
+                        <p>Opening Hours</p>
+                        <span>Mon - Fri, 9:00 - 20:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Your Company - 2025 All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwwILsybRKyxKySI1UDdsHpN3gk8TvSDK30WeoSnm0J2_vXq9OQYTQ5X8x3hm1Jg-Z5/exec';
+
+            function showToast(message) {
+                const toast = document.getElementById('toast-message');
+                toast.textContent = message;
+                toast.style.display = 'block';
+
+                setTimeout(() => {
+                    toast.style.display = 'none';
+                }, 10000); // Toast will disappear after 4 seconds
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                showToast('Submitting your form...');
+
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    showToast('Thank you! Your inquiry was submitted successfully. We will contact you soon.');
+                    form.reset();
+                })
+                .catch(error => {
+                    showToast('There was an error submitting the form. Please try again.');
+                    console.error('Error!', error.message);
+                });
+            });
+
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            hamburger.addEventListener("click", function () {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    hamburger.classList.remove("active");
+                    navMenu.classList.remove("active");
+                    navLinks.forEach(item => item.classList.remove("active"));
+                    this.classList.add("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

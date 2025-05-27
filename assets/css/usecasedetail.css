@@ -1,0 +1,130 @@
+/* Usecase Detail */
+/* Hero Section */
+.usecase-detail-hero {
+  position: relative;
+}
+
+.usecase-detail-hero-img {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+}
+
+.usecase-detail-hero-content {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  background: white;
+  padding: 2.5rem;
+  width: 80%;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+
+.usecase-detail-sample-text {
+  font-size: 0.875rem;
+  color: #1A65EB;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+.usecase-detail-hero-content h1 {
+  font-size: 2rem;
+  margin: 1.25rem 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.usecase-detail-hero-content hr {
+  margin: 3.125rem auto;
+  border: none;
+  border-top: 0.125rem solid #ddd;
+  width: 90%;
+}
+
+.usecase-detail-hero-content h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #021526;
+}
+
+.usecase-detail-hero-content p, 
+.usecase-detail-hero-content ul {
+  opacity: 0.65;
+  color: #021526;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.usecase-detail-hero-content ul {
+  list-style: disc inside;
+  padding-left: 1.25rem;
+}
+
+.usecase-detail-hero-content li {
+  margin-bottom: 0.625rem;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 48rem) {
+  /* On mobile devices, the hero content will take up more width and reduce the font sizes */
+  .usecase-detail-hero-content {
+    width: 90%;
+    padding: 1.25rem;
+  }
+
+  .usecase-detail-sample-text {
+    font-size: 0.75rem;
+  }
+
+  .usecase-detail-hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .usecase-detail-hero-content h2 {
+    font-size: 1.125rem;
+  }
+
+  .usecase-detail-hero-content p, 
+  .usecase-detail-hero-content ul {
+    font-size: 0.875rem;
+  }
+
+  .usecase-detail-hero-img {
+    height: 15.625rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  /* On very small screens (phones in portrait), make further adjustments */
+  .usecase-detail-hero-content {
+    width: 95%;
+    padding: 0.9375rem;
+    margin-top: 220px;
+  }
+
+  .usecase-detail-sample-text {
+    font-size: 0.625rem;
+  }
+
+  .usecase-detail-hero-content h1 {
+    font-size: 1.25rem;
+  }
+
+  .usecase-detail-hero-content h2 {
+    font-size: 1rem;
+  }
+
+  .usecase-detail-hero-content p, 
+  .usecase-detail-hero-content ul {
+    font-size: 0.75rem;
+  }
+
+  .usecase-detail-hero-img {
+    height: 12.5rem;
+  }
+}
